@@ -1,8 +1,8 @@
 /********** Template CSS **********/
 :root {
-    --primary: #a09481,;
-    --secondary: #a09481,;
-    --light: #d4c4ac;
+    --primary: #1E60AA;
+    --secondary: #FF4917;
+    --light: #EDF1FC;
     --dark: #17224D;
 }
 
@@ -76,6 +76,7 @@
     height: 75px
 ;
     padding: 0 4rem;
+    opacity: 0;
 }
 
 .nav-bar {
@@ -83,12 +84,14 @@
     padding: 0 4.75rem;
     transition: .5s;
     z-index: 9999;
+    opacity: 0;
 }
 
 .nav-bar.sticky-top {
     position: sticky;
     padding: 0;
     z-index: 9999;
+    opacity: 0;
 }
 
 .navbar .dropdown-toggle::after {
@@ -98,6 +101,7 @@
     font-weight: 900;
     vertical-align: middle;
     margin-left: 8px;
+    opacity: 0;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -108,27 +112,32 @@
     font-weight: 600;
     text-transform: uppercase;
     outline: none;
+    opacity: 0;
 }
 
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active {
+    color: var(--primary);
     opacity: 0;
 }
 
 @media (max-width: 991.98px) {
     .nav-bar {
         padding: 0;
+        opacity: 0;
     }
 
     .navbar-light .navbar-nav .nav-link  {
         margin-right: 0;
         padding: 10px 0;
+        opacity: 0;
     }
 
     .navbar-light .navbar-nav {
         margin-top: 1rem;
         padding-top: 1rem;
         border-top: 1px solid #EEEEEE;
+        opacity: 0;
     }
 }
 
@@ -141,13 +150,14 @@
         opacity: 0;
         visibility: hidden;
         transition: .5s;
+        opacity: 0;
     }
 
     .navbar .nav-item:hover .dropdown-menu {
         top: 100%;
         visibility: visible;
         transition: .5s;
-        opacity: 1;
+        opacity: 0;
     }
 }
 
